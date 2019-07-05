@@ -1,0 +1,47 @@
+{
+    "hiragana":[
+        {
+            "char" : "あ",
+            "romaji" : ["a"]
+        },
+        {
+            "char" : "い",
+            "romaji" : ["i"]
+        },
+        {
+            "char" : "う",
+            "romaji" : ["u"]
+        },
+        {
+            "char" : "え",
+            "romaji" : ["e"]
+        },
+        {
+            "char" : "お",
+            "romaji" : ["o"]
+        }
+    ],
+    
+    "katakana":[
+        {
+            "char" : "ア",
+            "romaji" : ["a"]
+        },
+        {
+            "char" : "イ",
+            "romaji" : ["i"]
+        },
+        {
+            "char" : "ウ",
+            "romaji" : ["u"]
+        },
+        {
+            "char" : "エ",
+            "romaji" : ["e"]
+        },
+        {
+            "char" : "オ",
+            "romaji" : ["o"]
+        }
+    ]
+}

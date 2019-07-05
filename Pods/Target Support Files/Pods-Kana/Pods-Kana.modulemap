@@ -1,0 +1,6 @@
+framework module Pods_Kana {
+  umbrella header "Pods-Kana-umbrella.h"
+
+  export *
+  module * { export * }
+}
