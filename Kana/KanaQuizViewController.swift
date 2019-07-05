@@ -110,23 +110,14 @@ class KanaQuizViewController: UIViewController, UITextFieldDelegate {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
                 let jsonObj = try JSON(data: data)
-                //print(jsonObj)
-                //print(jsonObj["hiragana"][0]["romaji"])
-                
-//                for type in jsonObj{
-//                    print(type)
-//                    print("hehe")
-//                }
                 
                 for (index,subJson):(String, JSON) in jsonObj {
                     print(index)
                     for (index,subJson):(String, JSON) in subJson {
 
-                        
                         var romajiArray: [String] = []
                         
                         for romaji in subJson["romaji"]{
-                            //characterPool.append(Character.init(id: 1, type: index, char: subJson["char"].string ?? "", romaji: romaji))
                             romajiArray.append(romaji.1.string ?? "")
                             print(romaji.1)
                         }
@@ -136,14 +127,10 @@ class KanaQuizViewController: UIViewController, UITextFieldDelegate {
                         print(subJson["char"])
                         
                         characterPool.append(Character.init(id: indexId, type: index, char: subJson["char"].string ?? "", romaji: romajiArray))
-                        
-                        //print(romajiArray)
                     }
-                    //print(subJson)
                 }
                 
                 print(characterPool.count)
-                //characterPool.removeAll()
                 
             } catch let error {
                 print("parse error: \(error.localizedDescription)")
@@ -154,16 +141,10 @@ class KanaQuizViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    //MARK: UITextFieldDelegate
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guessTextField.becomeFirstResponder()
         handleSubmit()
         return true
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
