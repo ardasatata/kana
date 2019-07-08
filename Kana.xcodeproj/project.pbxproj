@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		23206F02D95419BCFAFAD4C7 /* Pods_KanaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD9431BE42C8D3BAE3E6569 /* Pods_KanaTests.framework */; };
+		D80C946522D2E83B00AF5C16 /* MyButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = D80C946422D2E83B00AF5C16 /* MyButton.xib */; };
+		D80C946F22D2EA2600AF5C16 /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C946E22D2EA2600AF5C16 /* MyButton.swift */; };
 		D830569522CAFF3100BFDC39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D830569422CAFF3100BFDC39 /* AppDelegate.swift */; };
 		D830569722CAFF3100BFDC39 /* KanaQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D830569622CAFF3100BFDC39 /* KanaQuizViewController.swift */; };
 		D830569A22CAFF3100BFDC39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D830569822CAFF3100BFDC39 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 		87A511B95AB27E4C9879823E /* Pods-KanaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanaTests.debug.xcconfig"; path = "Target Support Files/Pods-KanaTests/Pods-KanaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		93697E9AED95E4E6142CD6F2 /* Pods-KanaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KanaTests.release.xcconfig"; path = "Target Support Files/Pods-KanaTests/Pods-KanaTests.release.xcconfig"; sourceTree = "<group>"; };
 		9C4C105FA7E17F94562004E2 /* Pods-Kana.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kana.release.xcconfig"; path = "Target Support Files/Pods-Kana/Pods-Kana.release.xcconfig"; sourceTree = "<group>"; };
+		D80C946422D2E83B00AF5C16 /* MyButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyButton.xib; sourceTree = "<group>"; };
+		D80C946E22D2EA2600AF5C16 /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
 		D830569122CAFF3100BFDC39 /* Kana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D830569422CAFF3100BFDC39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D830569622CAFF3100BFDC39 /* KanaQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanaQuizViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +98,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D80C946D22D2E9FE00AF5C16 /* CustomComponent */ = {
+			isa = PBXGroup;
+			children = (
+				D80C946E22D2EA2600AF5C16 /* MyButton.swift */,
+			);
+			path = CustomComponent;
+			sourceTree = "<group>";
+		};
 		D830568822CAFF3100BFDC39 = {
 			isa = PBXGroup;
 			children = (
@@ -119,10 +131,12 @@
 			children = (
 				D8AACFA022CB0E9F008687F2 /* Dataset */,
 				D8B2882122CB069E00794EF5 /* Model */,
-				D830569422CAFF3100BFDC39 /* AppDelegate.swift */,
+				D80C946D22D2E9FE00AF5C16 /* CustomComponent */,
 				D84C955D22CCA15B0008D153 /* Constants.swift */,
+				D830569422CAFF3100BFDC39 /* AppDelegate.swift */,
 				D830569622CAFF3100BFDC39 /* KanaQuizViewController.swift */,
 				D830569822CAFF3100BFDC39 /* Main.storyboard */,
+				D80C946422D2E83B00AF5C16 /* MyButton.xib */,
 				D830569B22CAFF3400BFDC39 /* Assets.xcassets */,
 				D830569D22CAFF3400BFDC39 /* LaunchScreen.storyboard */,
 				D83056A022CAFF3400BFDC39 /* Info.plist */,
@@ -241,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D830569F22CAFF3400BFDC39 /* LaunchScreen.storyboard in Resources */,
+				D80C946522D2E83B00AF5C16 /* MyButton.xib in Resources */,
 				D8D3951F22CF487C0032A4EF /* char_test.json in Resources */,
 				D830569C22CAFF3400BFDC39 /* Assets.xcassets in Resources */,
 				D830569A22CAFF3100BFDC39 /* Main.storyboard in Resources */,
@@ -328,6 +343,7 @@
 			files = (
 				D8B2882322CB06BF00794EF5 /* Character.swift in Sources */,
 				D830569722CAFF3100BFDC39 /* KanaQuizViewController.swift in Sources */,
+				D80C946F22D2EA2600AF5C16 /* MyButton.swift in Sources */,
 				D830569522CAFF3100BFDC39 /* AppDelegate.swift in Sources */,
 				D84C955E22CCA15B0008D153 /* Constants.swift in Sources */,
 			);

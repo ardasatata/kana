@@ -16,6 +16,7 @@ class KanaQuizViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var guessTextField: UITextField!
     @IBOutlet weak var guessAnswerResult: UILabel!
     @IBOutlet weak var kanaAnswerChar: UILabel!
+    @IBOutlet weak var ResetButton: UIButton!
     
     
     var characterPool: [Character] = [] //character yang dimasukkan quiz
@@ -26,7 +27,7 @@ class KanaQuizViewController: UIViewController, UITextFieldDelegate {
     
     //var characterType: String = "" //hiragana,katakana,all
     
-    @IBAction func submitPressed(_ sender: UIButton) {
+    @IBAction func submitPressed(_ sender: MyButton) {
             handleSubmit()
     }
     
@@ -42,6 +43,18 @@ class KanaQuizViewController: UIViewController, UITextFieldDelegate {
         loadCharacter()
         showNewCharacter()
         updateCharacter()
+        ResetButton.isHidden = true
+    }
+    
+    func resetQuiz(){
+        usedCharacterId.removeAll()
+        
+        KanaText.isHidden = false
+        KanaRomaji.isHidden = false
+        ResetButton.isHidden = true
+        
+        showNewCharacter()
+        updateCharacter()
     }
     
     func showNewCharacter(){
@@ -51,6 +64,10 @@ class KanaQuizViewController: UIViewController, UITextFieldDelegate {
         if ((usedCharacterId.count - characterPool.count) >= 0 ) {
             //quiz selesai
             print("sisa 1")
+            
+            ResetButton.isHidden = false
+            KanaText.isHidden = true
+            KanaRomaji.isHidden = true
         }else{
             while (usedCharacterId.contains(currentCharacter.id)) {
                 currentCharacter = characterPool[Int.random(in: 0 ..< characterPool.count)]
@@ -103,7 +120,7 @@ class KanaQuizViewController: UIViewController, UITextFieldDelegate {
 
     func loadCharacter(){
         
-        if let path = Bundle.main.path(forResource: "char_test", ofType: "json") {
+        if let path = Bundle.main.path(forResource: "character", ofType: "json") {
             
             var indexId: Int = 0
             
@@ -153,6 +170,11 @@ class KanaQuizViewController: UIViewController, UITextFieldDelegate {
         let newString: NSString =
             currentString.replacingCharacters(in: range, with: string) as NSString
         return newString.length <= maxLength
+    }
+    
+    
+    @IBAction func resetPressed(_ sender: UIButton) {
+        resetQuiz()
     }
     
 }
